@@ -1,8 +1,53 @@
-2022-02-15 16:24:10,140 INFO: Microblog startup [in C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\__init__.py:43]
-2022-02-15 16:28:49,128 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
-2022-02-15 16:28:57,695 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
-2022-02-15 16:29:28,432 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
-2022-02-15 16:30:44,700 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
-2022-02-15 16:30:56,105 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
-2022-02-15 16:34:12,919 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
-2022-02-15 16:36:38,119 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:43]
+2022-02-15 16:50:59,578 ERROR: Exception on /index [GET] [in C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\routes.py", line 29, in index
+    posts = current_user.followed_posts().paginate(
+  File "C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\models.py", line 55, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2022-02-15 16:51:20,563 ERROR: Exception on /index [GET] [in C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\routes.py", line 29, in index
+    posts = current_user.followed_posts().paginate(
+  File "C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\models.py", line 55, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2022-02-15 16:53:12,775 INFO: Microblog startup [in C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\__init__.py:43]
+2022-02-15 16:53:16,748 ERROR: Exception on /index [GET] [in C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Josh\.virtualenvs\flask_app-gvQn_Bzq\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\routes.py", line 29, in index
+    posts = current_user.followed_posts().paginate(
+  File "C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\models.py", line 54, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2022-02-15 16:55:34,052 INFO: Microblog startup [in C:\Users\Josh\OneDrive - University of Bristol\Desktop\flask_app\app\__init__.py:43]
