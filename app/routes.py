@@ -16,7 +16,7 @@ from app.models import Post
 from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
-from app.forms import ResetPasswordRequestForm
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
