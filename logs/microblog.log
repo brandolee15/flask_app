@@ -43,3 +43,41 @@ Traceback (most recent call last):
 werkzeug.routing.BuildError: Could not build url for endpoint 'auth.logout'. Did you mean 'logout' instead?
 2022-02-16 12:13:23,454 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
 2022-02-16 12:15:05,287 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:23:14,865 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:23:18,336 ERROR: Exception on /index [GET] [in C:\Python310\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Python310\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\routes.py", line 39, in index
+    return render_template('index.html', title='Home', form=form,
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 4, in template
+    <link rel="stylesheet"  type="text/css" href="{{url_for('filename='base.css')}}">
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'base'
+2022-02-16 12:25:07,726 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:26:49,127 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:28:05,717 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:28:29,462 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:32:52,131 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:34:23,725 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:36:24,387 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:38:28,695 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
