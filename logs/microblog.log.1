@@ -1,120 +1,132 @@
-2022-02-16 09:27:02,690 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+2022-02-16 12:07:15,771 ERROR: Exception on /index [GET] [in C:\Python310\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ACER\flask_app\app\routes.py", line 178, in reset_password_request
-    return render_template('reset_password_request.html',
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 147, in render_template
+  File "C:\Python310\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\routes.py", line 39, in index
+    return render_template('index.html', title='Home', form=form,
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 128, in _render
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 128, in _render
     rv = template.render(context)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 1291, in render
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 1291, in render
     self.environment.handle_exception()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\ACER\flask_app\app\templates\base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 8, in block 'content'
-    {{ form.password.label }}<br>
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2022-02-16 09:27:06,502 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 17, in block 'navbar'
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
+  File "C:\Python310\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python310\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Python310\lib\site-packages\werkzeug\routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.index'. Did you mean 'index' instead?
+2022-02-16 12:08:33,409 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:08:38,345 ERROR: Exception on /index [GET] [in C:\Python310\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ACER\flask_app\app\routes.py", line 178, in reset_password_request
-    return render_template('reset_password_request.html',
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 147, in render_template
+  File "C:\Python310\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\routes.py", line 39, in index
+    return render_template('index.html', title='Home', form=form,
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 128, in _render
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 128, in _render
     rv = template.render(context)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 1291, in render
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 1291, in render
     self.environment.handle_exception()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\ACER\flask_app\app\templates\base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 8, in block 'content'
-    {{ form.password.label }}<br>
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2022-02-16 09:34:56,415 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
-2022-02-16 09:35:14,081 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 36, in block 'navbar'
+    <a href="{{ url_for('messages') }}">{{ ('Messages') }}
+  File "C:\Python310\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python310\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Python310\lib\site-packages\werkzeug\routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'messages'. Did you mean 'register' instead?
+2022-02-16 12:10:54,872 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]
+2022-02-16 12:11:20,543 ERROR: Exception on /index [GET] [in C:\Python310\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ACER\flask_app\app\routes.py", line 178, in reset_password_request
-    return render_template('reset_password_request.html',
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 147, in render_template
+  File "C:\Python310\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\routes.py", line 39, in index
+    return render_template('index.html', title='Home', form=form,
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 128, in _render
+  File "C:\Python310\lib\site-packages\flask\templating.py", line 128, in _render
     rv = template.render(context)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 1291, in render
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 1291, in render
     self.environment.handle_exception()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+  File "C:\Python310\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\ACER\flask_app\app\templates\base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 15, in block 'content'
-    {{ form.password2.label }}<br>
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password2'
-2022-02-16 09:35:46,403 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
-2022-02-16 09:38:22,599 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
-2022-02-16 09:38:26,418 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
-Traceback (most recent call last):
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ACER\flask_app\app\routes.py", line 178, in reset_password_request
-    return render_template('reset_password_request.html',
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\ACER\flask_app\app\templates\base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 8, in block 'content'
-    {{ form.password.label }}<br>
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2022-02-16 09:40:01,863 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\templates\base.html", line 36, in block 'navbar'
+    <a href="{{ url_for('messages') }}">{{ ('Messages') }}
+  File "C:\Python310\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python310\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Python310\lib\site-packages\werkzeug\routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'messages'. Did you mean 'register' instead?
+2022-02-16 12:12:53,582 INFO: Microblog startup [in C:\Users\YagneshShukla\Documents\FutureProof\Lap4-Python\Flask_App\flask_app\app\__init__.py:47]

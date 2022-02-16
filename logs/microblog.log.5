@@ -1,4 +1,34 @@
-2022-02-16 09:27:02,690 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+2022-02-15 17:22:39,678 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ACER\flask_app\app\routes.py", line 177, in reset_password_request
+    return render_template('reset_password_request.html',
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\ACER\flask_app\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 8, in block 'content'
+    {{ form.password.label }}<br>
+  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+2022-02-15 17:25:41,707 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
+2022-02-15 17:25:45,653 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
   File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -27,7 +57,8 @@ Traceback (most recent call last):
   File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2022-02-16 09:27:06,502 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+2022-02-16 09:17:44,217 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
+2022-02-16 09:18:00,619 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
   File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -56,39 +87,8 @@ Traceback (most recent call last):
   File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2022-02-16 09:34:56,415 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
-2022-02-16 09:35:14,081 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
-Traceback (most recent call last):
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ACER\flask_app\app\routes.py", line 178, in reset_password_request
-    return render_template('reset_password_request.html',
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\ACER\flask_app\app\templates\base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\ACER\flask_app\app\templates\reset_password_request.html", line 15, in block 'content'
-    {{ form.password2.label }}<br>
-  File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password2'
-2022-02-16 09:35:46,403 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
-2022-02-16 09:38:22,599 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
-2022-02-16 09:38:26,418 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
+2022-02-16 09:24:04,917 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
+2022-02-16 09:24:11,557 ERROR: Exception on /reset_password_request [GET] [in C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
   File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -117,4 +117,4 @@ Traceback (most recent call last):
   File "C:\Users\ACER\.pyenv\pyenv-win\versions\3.9.1\lib\site-packages\jinja2\environment.py", line 474, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2022-02-16 09:40:01,863 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
+2022-02-16 09:26:57,680 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
