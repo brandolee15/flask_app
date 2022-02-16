@@ -64,3 +64,4 @@ jinja2.exceptions.TemplateNotFound: email/reset_password.txt
 2022-02-16 10:24:55,778 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
 2022-02-16 10:26:24,077 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
 2022-02-16 10:33:02,316 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
+2022-02-16 11:03:34,992 INFO: Microblog startup [in C:\Users\ACER\flask_app\app\__init__.py:45]
